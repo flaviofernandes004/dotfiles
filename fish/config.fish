@@ -18,3 +18,13 @@ for config_file in (find $current_location/configuration -type f -maxdepth 1)
     source $config_file
 end
 
+set -x LC_NUMERIC en_US
+set -x LC_TIME en_US
+set -x LC_COLLATE en_US
+set -x LC_MONETARY pt_PT
+set -x LC_MESSAGES en_US
+set -x LC_ALL en_US
+set -x LANG "en_US.UTF-8"
+
+set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
+
