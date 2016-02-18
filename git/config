@@ -1,0 +1,58 @@
+  # set your user tokens as environment variables, such as ~/.secrets
+  # See the README for examples.
+[color]
+  ui = true
+[color "branch"]
+  current = yellow
+  local = green
+  remote = blue
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  new = green
+[format]
+  pretty = format:%C(blue)%ad%Creset %C(yellow)%h%C(green)%d%Creset %C(blue)%s %C(magenta) [%an]%Creset
+[push]
+  default = simple
+[core]
+  editor = nvim
+  excludesfile = ~/.gitignore_global
+[commit]
+  template = ~/.config/git/gitmessage
+  gpgsign = true
+[include]
+  path = config_local
+[gist]
+  private = yes
+[diff]
+  tool = nvim
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = true
+[merge]
+  tool = vimdiff
+[user]
+  name = flaviofernandes004
+  email = flaviofernandes004@gmail.com
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[absorb]
+  maxStack=50
+[rerere]
+  enabled = 1
+[alias]
+  s = status -s
+  graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
+  alias = config --get-regexp ^alias\\. # List all aliases.
+
+  ls = log --pretty=format:"%C(yellow)%h\\ %Creset%s%Cblue\\ [%cn]\\%Cred%d" --decorate
+  stats = !git ls --numstat
+

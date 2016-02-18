@@ -1,0 +1,1 @@
+set -g HOMEBREW_NO_ANALYTICS 1

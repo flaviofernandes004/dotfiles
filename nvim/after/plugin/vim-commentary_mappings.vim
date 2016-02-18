@@ -1,0 +1,11 @@
+nnoremap <leader>cc :CommentaryLine<CR>
+xnoremap <leader>cc  :Commentary<CR>
+nnoremap <leader>cc :Commentary<CR>
+onoremap <leader>cc :Commentary<CR>
+nnoremap gcc <nop>
+xmap gc  <nop>
+nmap gc  <nop>
+omap gc  <nop>
+nmap gcc <nop>
+nmap cgc <nop>
+nmap gcu <nop>
