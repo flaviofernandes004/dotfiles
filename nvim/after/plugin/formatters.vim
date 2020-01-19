@@ -9,5 +9,5 @@ let g:formatters_rust = ['rustfmt']
 let g:formatdef_beauty = '"~/beautify_bash.rb - "'
 let g:formatters_sh = ['beauty']
 let g:formatters_zsh = ['beauty']
-" Python
-let g:formatter_yapf_style = 'pep8'
+
+autocmd BufWritePre *.py execute ':Black'

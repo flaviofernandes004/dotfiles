@@ -11,6 +11,7 @@ Plug 'bling/vim-airline'
 Plug 'sheerun/vim-polyglot'
 "Code formating
 Plug 'Chiel92/vim-autoformat'
+Plug 'psf/black'
 "Fast Fuzzy searcher
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'

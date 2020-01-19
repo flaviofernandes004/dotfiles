@@ -18,3 +18,4 @@ for config_file in (find $current_location/configuration -type f -maxdepth 1)
     source $config_file
 end
 
+set -g fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
