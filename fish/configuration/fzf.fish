@@ -3,6 +3,7 @@
 # --hidden: Search hidden files and folders
 # --follow: Follow symlinks
 # --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+set -g FZF_LEGACY_KEYBINDINGS 0
 
 set -g FZF_FIND_FILE_COMMAND 'fd --type file --follow --hidden --exclude .git --exclude node_modules --color=always'
 
