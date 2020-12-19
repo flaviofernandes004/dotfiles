@@ -1,2 +1,2 @@
-bass source ~/.asdf/plugins/java/set-java-home.sh
+source $HOME/.asdf/plugins/java/set-java-home.fish
 
